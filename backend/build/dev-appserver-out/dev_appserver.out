@@ -1,29 +1,21 @@
 Warning: Google App Engine Java 7 runtime is deprecated.
 Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
-Mar 27, 2018 4:58:36 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+Mar 29, 2018 9:57:30 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFO: Overwriting system property key 'java.util.logging.config.file', value '/usr/lib/google-cloud-sdk/platform/google_appengine/google/appengine/tools/java/config/sdk/logging.properties' with value 'WEB-INF/logging.properties' from '/home/redrose/Giit/FinalProject/backend/build/exploded-backend/WEB-INF/appengine-web.xml'
-Mar 27, 2018 4:58:36 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 29, 2018 9:57:30 PM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
-Mar 27, 2018 11:58:36 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+Mar 30, 2018 4:57:30 AM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 WARNING: Your working directory, (/home/redrose/Giit/FinalProject) is not equal to your 
 web application root (/home/redrose/Giit/FinalProject/backend/build/exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-Mar 27, 2018 11:58:36 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 30, 2018 4:57:30 AM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: jetty-6.1.x
-Mar 27, 2018 11:58:37 PM com.google.apphosting.utils.jetty.JettyLogger info
+Mar 30, 2018 4:57:31 AM com.google.apphosting.utils.jetty.JettyLogger info
 INFO: Started SelectChannelConnector@localhost:8004
-Mar 27, 2018 11:58:37 PM com.google.appengine.tools.development.AbstractModule startup
+Mar 30, 2018 4:57:31 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: Module instance default is running at http://localhost:8004/
-Mar 27, 2018 11:58:37 PM com.google.appengine.tools.development.AbstractModule startup
+Mar 30, 2018 4:57:31 AM com.google.appengine.tools.development.AbstractModule startup
 INFO: The admin console is running at http://localhost:8004/_ah/admin
-Mar 27, 2018 4:58:37 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+Mar 29, 2018 9:57:31 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFO: Dev App Server is now running
-Mar 27, 2018 4:58:40 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeByteBufferOperations
-WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
-Mar 27, 2018 4:58:40 PM com.google.appengine.repackaged.com.google.protobuf.UnsafeUtil supportsUnsafeArrayOperations
-WARNING: platform method missing - proto runtime falling back to safer methods: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "accessClassInPackage.sun.misc")
-Mar 27, 2018 4:58:41 PM com.google.appengine.tools.development.LocalResourceFileServlet doGet
-WARNING: No file found for: /favicon.ico
-Mar 27, 2018 4:58:41 PM com.google.appengine.tools.development.LocalResourceFileServlet doGet
-WARNING: No file found for: /favicon.ico

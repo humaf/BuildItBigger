@@ -57,6 +57,6 @@ public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
     protected void onPostExecute(String result) {
         retrive = result;
 
-        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 }
