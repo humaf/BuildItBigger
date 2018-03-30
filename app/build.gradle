@@ -38,12 +38,12 @@ android {
 
     productFlavors {
         free {
-            applicationId 'com.udacity.gradle.buildflavors.free'
+            applicationId 'com.udacity.gradle.builditbigger.free'
             versionName "1.0­free"
         }
         paid {
-            applicationId 'com.udacity.gradle.buildflavors.paid'
-            versionName "1.0­free"
+            applicationId 'com.udacity.builditbigger.gradle.paid'
+            versionName "1.0­paid"
         }
     }
     sourceSets {
@@ -51,11 +51,20 @@ android {
             java.srcDirs = ['src/main/java', 'src/androidTest/java', 'src/Paid/java', 'src/Free/java', 'src/free', 'src/free/java']
             res.srcDirs = ['src/main/res', 'src/Paid/res', 'src/Free/res', 'src/free/res']
         }
+        free {
+            res.srcDirs = ['src/free/res', 'src/free/res/']
+            java.srcDirs = ['src/free/java', 'src/free/java/']
+        }
+        paid {
+            java.srcDirs = ['src/paid/java', 'src/paid/java/']
+            res.srcDirs = ['src/paid/res', 'src/paid/res/']
+        }
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v4:26.1.0'
     endpointsServer project(path: ':backend', configuration: 'endpoints')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.google.android.gms:play-services-ads:11.8.0'
