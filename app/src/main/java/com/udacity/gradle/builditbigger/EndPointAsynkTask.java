@@ -16,15 +16,14 @@ import java.io.IOException;
 
 public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
 
-   static String retrive = "";
     private static MyApi myApiService = null;
-
+ //   MainActivityFragment mainActivityFragment;
     private Context context;
-
-
 
     @Override
     protected String doInBackground(Context... params) {
+
+
         if(myApiService == null) {  // Only do this once
             MyApi.Builder builder = new
                     MyApi.Builder(AndroidHttp.newCompatibleTransport(),
@@ -32,7 +31,7 @@ public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
                     // options for running against local devappserver
                     // ­ 10.0.2.2 is localhost's IP address in Android emulator
                     // ­ turn off compression when running against local devappserver
-                    .setRootUrl("http://10.0.2.2:8004/_ah/api/")
+                    .setRootUrl("http://10.0.2.2:8010/_ah/api/")
                     .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                         @Override                         public void initialize(AbstractGoogleClientRequest<?>
                                                                                          abstractGoogleClientRequest) throws IOException {
@@ -55,8 +54,10 @@ public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        retrive = result;
+        MainActivityFragment mainActivityFragment = new MainActivityFragment();
+        mainActivityFragment.myJoke = result;
+        mainActivityFragment.launchJokeActivity();
 
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 }

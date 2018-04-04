@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
 
       //  Toast.makeText(this,joker.getJoke(), Toast.LENGTH_SHORT).show();
-
-
         new EndPointAsynkTask().execute(this);
 
 

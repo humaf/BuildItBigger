@@ -10,20 +10,40 @@ import org.junit.runner.RunWith;
  */
 
 import org.junit.runners.JUnit4;
+
+import java.util.concurrent.TimeUnit;
+
+import static android.content.ContentValues.TAG;
 import static junit.framework.Assert.assertNotNull;
+import static junit.framework.Assert.assertTrue;
 
 @RunWith(JUnit4.class)
 
 public class EndPointAsynkTaskTest {
 
-    private static final String LOG_TAG = "NonEmptyStringTest";
 @Test
-    public void gettingJoke(){
+    public void gettingJoke() {
 
-        String check = EndPointAsynkTask.retrive;
-        Log.i("value is null or not",check);
-        assertNotNull(check);
+    EndPointAsynkTask endPointAsynkTask = new EndPointAsynkTask();
+    endPointAsynkTask.execute();
+
+    try {
+        String joke = endPointAsynkTask.get();
+        Log.d(TAG, "checkIfEndPointAsynkTaskReturnsEmptyString: " + joke);
+        System.out.println(joke);
+
+        assertNotNull(joke);
+        assertTrue(joke.length() > 0);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+}
+
 
 }
-}
+
+
+
+
+
 
