@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -10,6 +11,10 @@ import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 import java.io.IOException;
 
+import javax.security.auth.callback.Callback;
+
+import builditbigger.strawbericreations.com.jokeslibrary.JokeActivity;
+
 /**
  * Created by redrose on 3/26/18.
  */
@@ -17,12 +22,11 @@ import java.io.IOException;
 public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
 
     private static MyApi myApiService = null;
- //   MainActivityFragment mainActivityFragment;
     private Context context;
 
-    @Override
-    protected String doInBackground(Context... params) {
 
+ @Override
+    protected String doInBackground(Context... params) {
 
         if(myApiService == null) {  // Only do this once
             MyApi.Builder builder = new
@@ -54,10 +58,8 @@ public class EndPointAsynkTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        MainActivityFragment mainActivityFragment = new MainActivityFragment();
-        mainActivityFragment.myJoke = result;
-        mainActivityFragment.launchJokeActivity();
-
-        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
+
+
 }

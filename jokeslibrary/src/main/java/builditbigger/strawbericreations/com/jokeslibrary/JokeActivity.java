@@ -1,5 +1,6 @@
 package builditbigger.strawbericreations.com.jokeslibrary;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,4 +26,6 @@ public class JokeActivity extends AppCompatActivity {
             textView.setText("Where is the joke");
         }
     }
+
+
 }

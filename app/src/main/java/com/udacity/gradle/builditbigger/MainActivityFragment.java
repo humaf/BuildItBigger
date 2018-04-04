@@ -39,15 +39,5 @@ public class MainActivityFragment extends Fragment {
         mAdView.loadAd(adRequest);
         return root;
     }
-
-    public void launchJokeActivity(){
-
-            Context context = getActivity();
-            Intent intent = new Intent(context, JokeActivity.class);
-            intent.putExtra(context.getString(R.string.joketosend), myJoke);
-            //Toast.makeText(context, loadedJoke, Toast.LENGTH_LONG).show();
-            context.startActivity(intent);
-
-
-    }
+    
 }
