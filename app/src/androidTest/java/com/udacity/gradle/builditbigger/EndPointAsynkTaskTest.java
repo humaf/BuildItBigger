@@ -18,9 +18,23 @@ import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
 @RunWith(JUnit4.class)
+public class EndPointAsynkTaskTest  {
+  /*  @Test
+    public void testJokeDownload() {
 
-public class EndPointAsynkTaskTest {
+        try {
+          EndPointAsynkTask task = new EndPointAsynkTask();
+            task.execute();
+            String joke = task.get(60, TimeUnit.SECONDS);
 
+            assertThat(joke, notNullValue());
+            assertTrue(joke.length() > 0);
+
+        } catch (Exception e) {
+            fail("Operation timed out");
+        }
+    }
+    */
 @Test
     public void gettingJoke() {
 

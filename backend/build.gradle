@@ -35,7 +35,7 @@ dependencies {
 }
 appengine {  // App Engine tasks configuration
    run{
-       port = 8010
+       port = 8002
    }
 
 }

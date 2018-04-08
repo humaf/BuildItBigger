@@ -20,7 +20,8 @@ public class JokeActivity extends AppCompatActivity {
 
         TextView textView = (TextView)findViewById(R.id.text);
         Intent intent = getIntent();
-        result = intent.getStringExtra(EXTRA_TEXT);
+        result = intent.getStringExtra("Joke");
+       // result = intent.getStringExtra(EXTRA_TEXT);
       //  result = intent.getStringExtra(getString(R.string.joketosend));
 
         if (result != null) {
@@ -30,10 +31,10 @@ public class JokeActivity extends AppCompatActivity {
         }
     }
 
-    public static Intent makeIntent(Context context, String joke) {
+ /*   public static Intent makeIntent(Context context, String joke) {
         final Intent intent = new Intent(context, JokeActivity.class);
         intent.putExtra(EXTRA_TEXT, joke);
         return intent;
     }
-
+*/
 }
